@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas</title>
+</head>
+<body>
+  <canvas id="c" width=200 height=200></canvas>
+  <script>
+    let c = document.querySelector("#c");
+    let ctx = c.getContext("2d");
+    let image = new Image();
+    image.onload = function() {
+      console.log("Loaded")
+      ctx.drawImage(image, 0, 0, c.width, c.height)
+    }
+
+    image.src ="img.jpg"
+  </script>
+</body>
+</html>
